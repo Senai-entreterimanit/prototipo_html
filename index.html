@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal EMEF Vicente Santoro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="/img/logo_mobile.png" alt="Logo da Prefeitura" id="logo">
+        <h1>EMEF Vicente Santoro</h1>
+        <nav>
+            <ul>
+                <li><a href="#comunicados">Comunicados</a></li>
+                <li><a href="#calendario">Calendário</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="notification-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Notificação Importante!</h2>
+            <p>Não perca a Reunião de Pais em 20/02 às 18h!</p>
+        </div>
+    </div>
+
+    <section id="noticias">
+        <h2>Últimas Notícias</h2>
+        <article class="card">
+            <h3>Nova Biblioteca Inaugurada</h3>
+            <p>A escola inaugurou uma nova biblioteca com mais de 500 livros!</p>
+        </article>
+    </section>
+    
+    <section id="professores">
+        <h2>Nosso Corpo Docente :</h2>
+        <ul>
+            <li>
+                <img src="img/prof_matematica.jfif" alt="Professora de Matemática" class="img-professor">
+                <strong>Ana Souza</strong> – Matemática
+            </li>
+            <li>
+                <img src="img/prof_portugues.jpg" alt="Professor de Português" class="img-professor">
+                <strong>Carlão Silva</strong> – Português
+            </li>
+            <li>
+                <img src="img/prof-ciencias.jpg" alt="Professora de Ciências" class="img-professor">
+                <strong>Fernanda Lima</strong> – Ciências
+            </li>
+        </ul>
+    </section>
+    
+    <section id="eventos">
+        <h2>Próximos Eventos</h2>
+        <ul>
+            <li> 
+                📅 10/03 - Feira de Ciências
+            </li>
+            <li>
+                📅 20/04 - Apresentação de Teatro
+            </li>
+        </ul>
+    </section>
+    
+    <section id="projetos">
+        <h2>Projetos dos Alunos</h2>
+        <div class="card">
+            <img src="img/desenho.jpg" alt="Desenhos dos alunos" class="img-projeto">
+            <h3>Arte e Criatividade</h3>
+            <p>Os alunos do 3º ano fizeram uma exposição de desenhos sobre o meio ambiente.</p>
+        </div>
+    </section>
+
+    <section id="comunicados">
+        <h2>Últimos Comunicados</h2>
+        <div class="card">
+            <h3>Reunião de Pais</h3>
+            <p>Dia 20 de fevereiro, às 18h, na escola.</p>
+        </div>
+    </section>
+
+    <section id="calendario">
+        <h2>Calendário Escolar</h2>
+        <ul id="eventos">
+            <li>📅 15/02 - Início do Ano Letivo</li>
+            <li>📅 25/02 - Reunião de Pais</li>
+        </ul>
+    </section>
+
+    <section id="cardapio">
+        <h2>Cardápio Escolar</h2>
+        <ul>
+            <li><strong>Segunda-feira:</strong> Arroz, feijão, frango grelhado e salada.</li>
+            <li><strong>Terça-feira:</strong> Macarrão ao sugo, carne moída e suco natural.</li>
+            <li><strong>Quarta-feira:</strong> Arroz, feijão, peixe assado e legumes cozidos.</li>
+            <li><strong>Quinta-feira:</strong> Sopa de legumes, pão integral e fruta.</li>
+            <li><strong>Sexta-feira:</strong> Arroz, feijão, carne assada e salada verde.</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p><strong>Endereço:</strong> Cidadão João Novaes, nº 747 – Centro</p>
+        <p><strong>Telefone:</strong> (17) 3131-1251</p>
+        <p><strong>E-mail:</strong> emefsantoro@gmail.com</p>
+        
+        <h3>Equipe Gestora</h3>
+        <ul>
+            <li><strong>Diretora:</strong> Geovana Sangali Buzinaro</li>
+            <li><strong>Vice-Diretora:</strong> Mara Rúbia do Carmo</li>
+            <li><strong>Coordenador Pedagógico:</strong> Anderson Lucas</li>
+            <li><strong>Coordenadora Pedagógica:</strong> Nathiele dos Santos Gobbi</li>
+        </ul>
+    </section>
+
+    <section id="feedback">
+        <h2>Deixe seu Feedback</h2>
+        <form>
+            <label for="feedback-text">Comentários:</label>
+            <textarea id="feedback-text" rows="4" placeholder="Compartilhe sua opinião"></textarea>
+            <button type="submit">Enviar Feedback</button>
+        </form>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2025 EMEF Vicente Santoro - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
