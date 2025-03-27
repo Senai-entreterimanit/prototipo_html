@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Rolagem suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+        });
+    });
+
+    // Chat interativo
     const chatBtn = document.getElementById("chat-btn");
     const chatBox = document.getElementById("chat-box");
     const closeChat = document.getElementById("close-chat");
@@ -6,11 +15,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const messageInput = document.getElementById("message");
     const chatContent = document.getElementById("chat-content");
 
-    // Abre e fecha o chat
-    chatBtn.addEventListener("click", () => chatBox.style.display = "block");
+    chatBtn.addEventListener("click", () => {
+        chatBox.style.display = "block";
+        chatBox.classList.add("fadeIn");
+    });
+    
     closeChat.addEventListener("click", () => chatBox.style.display = "none");
-
-    // Envia mensagem do usuário
+    
     sendBtn.addEventListener("click", () => {
         let msg = messageInput.value.trim();
         if (msg) {
@@ -19,8 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
             messageInput.value = "";
         }
     });
-
-    // Adiciona mensagens ao chat
+    
     function addMessage(sender, text, className) {
         let messageDiv = document.createElement("div");
         messageDiv.classList.add("message", className);
@@ -28,20 +38,18 @@ document.addEventListener("DOMContentLoaded", function() {
         chatContent.appendChild(messageDiv);
         chatContent.scrollTop = chatContent.scrollHeight;
     }
+
+    // Modal de notificação
+    const modal = document.getElementById("notification-modal");
+    const closeModal = document.getElementsByClassName("close")[0];
+
+    setTimeout(() => modal.style.display = "block", 3000);
+    
+    closeModal.onclick = () => modal.style.display = "none";
+    
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
 });
-
-const modal = document.getElementById("notification-modal");
-const closeModal = document.getElementsByClassName("close")[0];
-
-// Exibe o modal após 3 segundos
-setTimeout(() => modal.style.display = "block", 3000);
-
-// Fecha o modal ao clicar no "x"
-closeModal.onclick = () => modal.style.display = "none";
-
-// Fecha o modal quando clicar fora dele
-window.onclick = (event) => {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-};
